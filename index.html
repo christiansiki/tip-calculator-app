@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- Javascript -->
+  <script defer src="index.js"></script>
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,29 +26,48 @@
 </head>
 <body>
 
-  Bill
+  <main>
+    <h1 class="text-center my-5">Splitter</h1>
+    <div class="container">
+      <div class="row">
+        <form class="col-6">
+          <label class="form-label" for="bill">Bill</label>
+          <input class="form-control" id="bill"type="text" 
+            style="background-image: url(./images/icon-dollar.svg); 
+                  background-repeat: no-repeat;">
+          <label class="" for="select-tip">Select Tip %</label>
+          <div class="btn-group" role="group">
+            <button class="btn btn-primary">5%</button>
+            <button class="btn btn-primary">10%</button>
+            <button class="btn btn-primary">15%</button>
+            <button class="btn btn-primary">25%</button>
+            <button class="btn btn-primary">50%</button>
+          </div>
+          <input class="form-control" type="text" placeholder="Custom">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <label class="form-label" for="number-of-people">Number of People</label>
+          <input id="number-of-people" class="form-control" type="text" 
+            style="background-image: url(./images/icon-person.svg); 
+                  background-repeat: no-repeat;">
+        </form>
+        <div class="col-6">
+          <h2>Tip Amount
+            <br>/ person
+          </h2>
+          <h2>Total
+            <br>/ person
+          </h2>
+          <button id="reset-btn" class="btn btn-primary">Reset</button>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/christiansiki">Christian Siki</a>.
+    </div>
+  </footer>
 </body>
 </html>
